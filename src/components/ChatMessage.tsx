@@ -14,7 +14,7 @@ const ChatMessage = ({ message, isSent }: ChatMessageProps) => {
   });
   return (
     <div className={`chat-message ${isSent ? 'sent' : 'received'}`}>
-      <div className="message-content">{message.text}</div>
+      <div className="message-content" data-testid="message-content">{message.text}</div>
       <div className="message-timestamp">{timestamp}</div>
     </div>
   );
