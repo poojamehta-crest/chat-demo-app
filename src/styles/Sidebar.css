@@ -1,0 +1,64 @@
+.sidebar {
+  width: 400px;
+  border-right: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.app-title {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 24px;
+  color: #000;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin: 0 24px;
+  padding: 8px 16px 8px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.search-icon {
+  margin-right: 12px;
+}
+
+.search-placeholder {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: #828282;
+  flex: 1;
+}
+
+.contacts-list {
+  margin-top: 24px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+@media (max-width: 991px) {
+  .sidebar {
+    width: 320px;
+  }
+}
+
+@media (max-width: 640px) {
+  .sidebar {
+    display: none;
+    width: 100%;
+    height: calc(100vh - 60px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+
+  .sidebar.visible {
+    display: flex;
+  }
+}
