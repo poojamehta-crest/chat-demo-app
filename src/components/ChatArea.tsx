@@ -225,6 +225,7 @@ const ChatArea = ({ contact }: ChatAreaProps) => {
           type="text"
           placeholder="Type a message"
           value={newMessage}
+          data-testid="message-input"
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewMessage(e.target.value)}
           onKeyPress={(e: React.KeyboardEvent<HTMLInputElement>) => {
             if (e.key === "Enter") {
@@ -236,6 +237,7 @@ const ChatArea = ({ contact }: ChatAreaProps) => {
         <button
           type="button"
           className="send-button"
+          data-testid="send-button"
           onClick={handleSendMessage}
           disabled={!newMessage.trim()}
         >

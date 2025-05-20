@@ -95,6 +95,37 @@ chat-demo-app/
   - TypeScript
   - Node.js
 
+## Testing
+
+The application uses Jest and React Testing Library for unit testing. To run tests:
+
+```bash
+# Run tests
+npm test
+
+# Run tests with coverage
+npm test -- --coverage
+```
+
+### Current Test Coverage
+
+```
+-----------------|---------|----------|---------|---------|-------------------
+File             | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-----------------|---------|----------|---------|---------|-------------------
+All files        |   89.88 |    78.26 |     100 |   90.47 |                   
+ ChatArea.tsx    |   88.75 |    73.68 |     100 |   89.33 | 31-32,62-63,74    
+ ChatMessage.tsx |     100 |      100 |     100 |     100 |                   
+ ContactItem.tsx |     100 |      100 |     100 |     100 |                   
+-----------------|---------|----------|---------|---------|-------------------
+```
+
+The test suite covers:
+- Component rendering
+- User interactions (typing messages, sending messages)
+- Message grouping and formatting
+- Contact management
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
