@@ -11,7 +11,7 @@ const ProfileSidebar = ({ contact }: ProfileSidebarProps) => {
       <div className="profile-info">
         <div className="profile-avatar">
           <img
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/dcfdb5ea536f7c828f0d34ec12ebeebbe16c7f00"
+            src={contact.avatar}
             alt={contact.name}
           />
         </div>
